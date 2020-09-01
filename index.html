@@ -1,272 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
     <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>C# Getting Started FAQ</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-	
-	<!-- Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-	
-	<style>
-		#foo {
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		}
-	</style>
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <title>C# Discord - C# Discord Community</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/theme.css">
 </head>
 
 <body>
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Discord-CSharp FAQ
+    <nav class="st-nav navbar main-nav navigation fixed-top dark-link" id="main-nav">
+        <div class="container">
+            <ul class="st-nav-menu nav navbar-nav">
+                <li class="st-nav-section nav-item">
+                    <a href="#main" class="navbar-brand">
+                        <img src="img/logo.png" alt="C# Discord Logo" class="logo logo-sticky">
                     </a>
                 </li>
-                <li>
-                    <a href="#about">About This FAQ</a>
-                </li>
-                <li>
-                    <a href="#wheredoistart">Where Do I Start?</a>
-                </li>
-                <li>
-                    <a href="#starting">Starting Development</a>
-                </li>
-                <li>
-                    <a href="#generaldev">General Development</a>
-                </li>
-                <li>
-                    <a href="#gamedev">Game Development</a>
-                </li>
-                <li>
-                    <a href="#mobdev">Mobile Development</a>
-                </li>
-                <li>
-                    <a href="#webdev">Web Development</a>
-                </li>
-				<li>
-                    <a href="#resources">Resources</a>
-                </li>
-				<li>
-                    <a href="#student">Free Student Resources</a>
+                <li class="st-nav-section st-nav-primary nav-item">
+                    <a class="st-root-link nav-link" href="index.html">Home </a>
+                    <a class="st-root-link item-products st-has-dropdown nav-link" href="rules.html">Rules </a>
+                    <a class="st-root-link item-products st-has-dropdown nav-link" href="https://discord.gg/csharp">Discord </a>
+                    <a class="st-root-link item-company st-has-dropdown nav-link" href="https://github.com/discord-csharp">GitHub </a>
                 </li>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
+    </nav>
+    
+    <main class="overflow-hidden">
+        <header class="header integrations-header section">
+            <div class="shapes-container">
+                <div class="shape pattern pattern-dots">
+                    <div></div>
+                </div>
+                <div class="static-shape background-shape-main"></div>
+            </div>
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-						<img src="img/header.gif"/>
-					
-                        <h3 id="about">About This FAQ</h3>
-                        <p>This FAQ was created by the various members of the Discord C# Channel to help with anyone new to C# and looking for guidance. There are many, many different approaches to learning the .NET stack, none of which could be described as wrong. This FAQ aims to inform about the most common recommendations, advice, tools, frameworks etc. If you're not looking for advice and you're just here for the links to resources, click <a href="#resources">here</a> if you want to use them or if you're not running Windows.</p>
-
-						<h3 id="wheredoistart">Where Do I Start?</h3>
-
-						<p>That largely depends on where you want to end. The sections below give some advice depending on if your priority is mobile development, web development, game development or just-get-me-a-job development. That said, starting with vanilla C# is a given.</p>
-
-						<h3 id="starting">Starting Development</h3>
-
-						<p>Installing Visual Studio is (by a huge margin) the most recommended first step. Visual Studio Community Edition is free and can be downloaded <a href="http://www.visualstudio.com/products/visual-studio-community-vs">here</a>. Visual Studio is highly regarded and you'll find that lots of learning materials will assume you're using it. There is a list of other IDEs listed below in the <a href="#resources">Resources</a> section.</p>
-
-						<p>The next step depends heavily on your current skill level with programming in general and the best option is usually grabbing a book on C# and diving in at the point you feel comfortable. The following are some books that our users have had some success with (most links are to Amazon but with a little skillful googling you should find them floating around).</p>
-
-						<ul>
-						<li><a href="http://www.robmiles.com/s/CSharp-Book-2015-Final.pdf">The C# Yellow Book</a> by Rob Miles, University of Hull - A very accessible book with the added bonus of being free</li><br/>
-						<li><a href="https://www.amazon.com/C-Depth-Jon-Skeet/dp/1935182471">C# In Depth</a> by Jon Skeet</li><br/>
-						<li><a href="https://www.amazon.com/Head-First-C-Jennifer-Greene/dp/1449343503">Head First C#</a> by O'Reilly</li><br/>
-						<li><a href="https://www.amazon.com/Beginning-Programming-Visual-Studio-2015/dp/1119096685">Beginning C Sharp Programming with Visual Studio</a> by Perkins, Hammer, & Reid - This book also covers installing Visual Studio if you need guidance</li><br/>
-						<li><a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#c-sharp">A list of free programming books</a>, compiled on GitHub</li><br/>
-						</ul>
-						
-						<p>If you want to follow some online tutorials here are some recommended links</p>
-
-						<ul>
-						<li><a href="http://msdn.microsoft.com/en-us/vstudio/hh341490.aspx">Microsoft Developer Network</a></li><br/>
-						<li><a href="http://www.tutorialspoint.com/csharp/">Tutorials Point C#</a></li><br/>
-						<li><a href="http://www.learncs.org/">LearnCS.org</a></li><br/>
-						<li><a href="http://www.csharp-station.com/tutorial.aspx">CSharp Station</a></li><br/>
-						</ul>
-
-						<p>Learning about general programming concepts that aren't specific to C# is a good plan. Most people you ask about where to start will often tell you to begin with design patterns, data structures, algorithms etc. This might be less hands on and a little drier than you want, but learning them sooner can save sweat and tears later. Below are some recommended books about programming in general.</p>
-						
-						<ul>
-						<li><a href="https://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670">Code Complete, Second Edition</a>, by Steve McConnell</li><br/>
-						<li><a href="https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124?ie=UTF8&*Version*=1&*entries*=0">Head First Design Patterns</a> by Bates, Freeman, Robson, & Sierra</li><br/>
-						<li><a href="https://www.amazon.com/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X">The Pragmatic Programmer</a> by Andrew Hunt & David Thomas</li><br/>
-						<li><a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a> by Robert C. Martin</li><br/>
-						<li><a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844?ie=UTF8&*Version*=1&*entries*=0">Introduction to Algorithms</a>, by CLRS</li><br/>
-						</ul>
-						
-						<h3 id="generaldev">General C# Development</h3>
-
-						<p>Most people viewing this page likely want to move into the software development industry. So what makes you a good candidate to hire? Well, a degree in Computer Science is a good start. Other than that you can practise development using tools and design patterns that software development houses use themselves, then use these skills to develop a portoflio of applications on GitHub and also contribute to Open Source projects.</p>
-
-						<p>Companies developing desktop applications use WinForms, WPF, and UWP for their GUIs. WinForms is the oldest framework but you won't have to look hard to find businesses maintaining software using this framework. WPF is newer and more commonly listed on job requirements. UWP is the newest framework to allow development for applications on Windows 10 and Windows Phones/Tablets. If you have plenty of time then learn WinForms, then WPF, then UWP. If you don't, start with WPF. If you need more info on WinForms and WPF that you don't find in the books linked over this page then Google is your friend, there are lots of resources out there for these frameworks.</p>
-
-						<p>If you are studying WPF it is recommended to learn the MVVM pattern sooner rather than later. A good approach would be to learn WPF until you understand data bindings, then jump over to learning MVVM. There are not as many resources for learning MVVM as there should be, but a few small guides are listed below.</p>
-						
-						<ul>
-						<li><a href="http://msdn.microsoft.com/en-us/magazine/dd419663.aspx">MSDN Patterns - WPF Apps With The MVVM Design Pattern</a></li><br/>
-						<li><a href="http://www.tutorialspoint.com/mvvm/index.htm">TutorialsPoint MVVM</a></li><br/>
-						<li><a href="http://www.codeproject.com/Articles/819294/WPF-MVVM-step-by-step-Basics-to-Advance-Level">CodeProject WPF MVVM step by step</a></li><br/>
-						<li><a href="http://geekswithblogs.net/driescronje/archive/2014/07/18/wpf-mvvm-pattern.aspx">MVVM Simplified</a></li><br/>
-						<li><a href="http://rarcher.azurewebsites.net/Post/PostContent/25">RArcher - Embracing MVVM</a> (Context of Windows 8 Store Development)</li><br/>
-						</ul>
-
-						<p>Other tools used in a business setting that you should learn are the various version control systems (with Git being the most common), the various testing approaches (with Unit Testing being a good place to start), and a good understanding of LINQ will be very helpful. The sooner you start using these the better.<p>
-
-						<h3 id="gamedev">Game Development</h3>
-
-						<p>Game Development in the .NET framework is mostly done within the Unity framework, which you can install from <a href="http://unity3d.com">here</a>. Another popular framework is <a href="http://www.monogame.net">MonoGame</a> which allows cross platform development. Below is a list of some resources to get you started.</p>
-						
-						<ul>
-						<li><a href="http://unity3d.com/learn/tutorials">Tutorials on the Unity3d Website</a></li><br/>
-						<li><a href="http://msdn.microsoft.com/en-us/magazine/dn759441.aspx">MSDN Unity: Developing Your First Game with Unity and C#</a></li><br/>
-						<li><a href="http://www.gamesfromscratch.com/page/MonoGame-Tutorial-Series.aspx">GamesFromScratch Monogame Tutorial Series</a></li><br/>
-						<li><a href="http://rbwhitaker.wikidot.com/monogame-tutorials">RB Whitakers Monogame Tutorials</a></li><br/>
-						</ul>
-
-						<h3 id="mobdev">Mobile Development</h3>
-
-						<p>In the .NET framework, <a href="http://www.xamarin.com">Xamarin</a> allows developers to write code that can be deployed to multiple mobile platforms. In March 2016, Microsoft made Xamarin free (and then later Open Source), which means opportunities to get paid to develop with it are only likely to increase.</p>
-
-						<p>You can install Xamarin into Visual Studio from <a href="http://www.xamarin.com/download">here</a>.</p>
-
-						<h3 id="webdev">Web Development</h3>
-
-						<p>For web development you will want to study ASP.Net and the MVC design pattern which is very common. <a href="http://www.asp.net/mvc">Microsofts ASP.NET MVC Tutorials</a> are a great place to start for this. You will also want to learn the Entity Framework and SQL at which point you'll have covered the entire .NET stack. After these you should gain some knowledge in HTML, CSS, Javascript, and the various frontend frameworks (Angular.js, bootstrap etc) which we won't cover here.</p>
-						
-						<p>Microsoft is currently developing .NET Core, which is essentially an open-source, cross platform rebuild of it's .Net framework (currently only in regards to server side applications). This is likely to be the "future" and worth your time getting familiar with when possible. You can get .Net Core Preview from <a href="https://www.microsoft.com/net/core">here</a> while <a href="https://docs.asp.net/en/latest/tutorials/first-mvc-app/">this tutorial</a> on Asp.net is a good starting point.</p>
-												
-						<h3 id="resources">Resources</h3>
-						
-						<p>Below is a fairly random selection of resources that our users and users from other communities have found useful in the past. If any links are dead or you want to recommend some to add, please let us know in the discord channel.</p>
-						
-						<ul>
-						<li>Free Online Resources</li>
-							<ul>
-							<li><a href="http://www.robmiles.com/s/CSharp-Book-2015-Final.pdf">The C# Yellow Book</a> by Rob Miles, University of Hull</li>
-							<li><a href="http://www.techotopia.com/index.php/C_Sharp_Essentials">C Sharp Essentials</a> online eBook</li>
-							<li><a href="http://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#c-sharp">A list of free programming books</a>, compiled on GitHub</li>
-							<li><a href="http://channel9.msdn.com/Series/C-Fundamentals-for-Absolute-Beginners">MSDN C# Fundamentals for Absolute Beginners</a></li>
-							<li><a href="http://msdn.microsoft.com/en-us/library/vstudio/dd460655.aspx">MSDN C# Programming Concepts</a>
-							<li><a href="http://msdn.microsoft.com/en-US/library/ms379571.aspx">MSDN Data Structures C# 2.0</a>
-							<li><a href="http://mva.microsoft.com">Microsoft Virtual Academy</a> - Official Learning Materials (highly recommended)</li>
-							<li><a href="http://www.asp.net/mvc">Microsofts ASP.NET MVC Tutorials</a></li>
-							<li><a href="http://dotnetperls.com">Dot Net Perls</a> - Good as a reference</li>
-							<li><a href="http://dotnetslackers.com/projects/Data-Structures-And-Algorithms/">Data Structures and Algorithms: Annotated Reference with Examples</a> (eBook)</li>
-							<li><a href="http://www.edx.org/course/programming-c-microsoft-dev204x-2">edX Programming With C#</a></li>
-							<li><a href="http://stackoverflow.com/questions/tagged/c%23">StackOverflow</a> - Good for specific problems</li>
-							<li><a href="http://www.hackerrank.com">Hacker Rank</a> - Practise coding by solving challenges (recommended)</li>
-							<li><a href="http://msdn.microsoft.com/en-us/library/ff926074.aspx">MSDN C# Coding Conventions</a></li>
-							<li><a href="http://www.dofactory.com/reference/csharp-coding-standards">Dofactory C# Coding Conventions Abridged</a></li>
-							</ul>
-						<li>Communities</li>
-							<ul>
-							<li><a href="http://discord.gg/0np62rq4o8ERhyex">Discord Group Invite Link</a></li>
-							<li><a href="http://www.reddit.com/r/csharp">/r/csharp subreddit</a></li>
-							<li><a href="http://www.reddit.com/r/dotnet">/r/dotnet subreddit</a></li>
-							<li><a href="http://www.freecodecamp.com">Free Code Camp</a> - Develop a project in a team for a Non-Profit
-							</ul>
-						<li>Paid Online Resources</li>
-							<ul>
-							<li><a href="http://www.pluralsight.com">PluralSight</a> (recommended)</li>
-							<li><a href="http://www.udemy.com">Udemy</li>
-							<li><a href="http://www.coursera.org/learn/game-programming">Coursera - Beginning Game Programming with C#</a></li>
-							</ul>
-						<li>IDE's</li>
-							<ul>
-							<li><a href="http://www.visualstudio.com/products/visual-studio-community-vs">Visual Studio Community 2017</a> (Windows)</li>
-							<li><a href="http://www.monodevelop.com">Monodevelop</a> (Windows/Mac/Linux)</li>
-							<li><a href="http://code.visualstudio.com">VisualStudio Code</a> (Windows/Mac/Linux)</li>
-							<li><a href="http://www.jetbrains.com/rider/">JetBrains Rider</a> (Windows/Mac/Linux)</li>
-						<li>Other Useful Programs/Websites</li>
-							<ul>
-							<li><a href="http://www.monogame.net">MonoGame</a> - Framework for developing cross platform games</li>
-							<li><a href="http://dotnetfiddle.net/">.Net Fiddle</a> - Sandbox for writing/testing .NET code</li>
-							<li><a href="http://www.red-gate.com/products/dotnet-development/reflector/">.Net Reflector - Most popular .NET decompiler</li>
-							<li><a href="http://ilspy.net/">ILSpy</a> - Free .NET decompiler</li>
-							<li><a href="http://www.jetbrains.com/decompiler/">dotPeek</a> - Free .NET decompiler</li>
-							<li><a href="http://www.jetbrains.com/resharper/">Resharper</a> - Makes your code better, suggests efficiencies etc</li>
-							<li><a href="http://www.vsrefactoringessentials.com">Refactoring Essentials for Visual Studio</a> - Same as Resharper but free</li>
-							<li><a href="http://www.linqpad.net">LINQPad</a> - Sandbox for LINQ queries and C# code</li>
-							<li><a href="https://roslynpad.net/">RoslynPad</a></li>
-							</ul>
-						</ul>
-						
-						<h3 id="student">Free Student Resources</h3>
-						
-						<p>If you're a student you can get a bunch of free stuff. The best place to start in this case is with the <a href="http://www.dreamspark.com/">Microsoft Dreamspark program</a>. This will give you free copies of software, a free 90 day subscription to Pluralsight, more free resources from GitHub, and quite a lot of <a href="http://www.dreamspark.com/student/Software-Catalog.aspx">other stuff</a>. You can sign up for it <a href="http://www.dreamspark.com/student/">here</a>.</p>
-						
-						<p>Jetbrains offer a year long license to use a number of their products, including ReSharper Ultimate. Apply <a href="https://www.jetbrains.com/student/">here</a> to claim access.</p>
-						
-						<p>GitHub offer a great <a href="https://education.github.com/pack">Student Developer Pack</a> that comes with access to AWS credits, unlimited private GitHub repos, DNS plans, and quite a few other useful services.</p>
-						
-						<h3 id="contact">Need more advice?</h3>
-						
-						<p>Don't be afraid to ask questions in the <a href="http://aka.ms/csharp-discord" target="_blank">discord channel</a> or the <a href="https://www.reddit.com/r/csharp" target="_blank">C# subreddit</a>, there's no stupid questions and we all started from zero knowledge at some point!</p> 
-						
-						<br/><br/>
-						
-						<div id="foo" padding="10">
-							<a style="bar" href="#menu-toggle" class="btn btn-default" bottom="10px" id="menu-toggle">Toggle Menu</a>
-						</div>
-
-                        
+                    <div class="col-md-10 mx-auto text-center">
+                        <h1 class="bold font-md font-md-lg">A community for help, support and discussion for all things C#</h1>
+                        <p class="lead text-muted">With over 12,000 members, and over 200,000 messages a month, join the most active .NET C# Discord community to help or get help and discuss programming with like-minded people.</p>
+                        <a href="https://discord.gg/csharp" class="btn btn-primary btn-lg btn-rounded bold px-4 mt-4">Join the Discord</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /#page-content-wrapper -->
+            <div class="bubbles-wrap">
+                <div class="bubbles-container"></div>
+            </div>
+        </header>
+    </main>
 
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
+    <script src="js/index.js"></script>
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/stripe-bubbles.js"></script>
 </body>
-
 </html>
