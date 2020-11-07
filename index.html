@@ -15,21 +15,44 @@
 </head>
 
 <body>
+    
     <nav class="st-nav navbar main-nav navigation fixed-top dark-link" id="main-nav">
         <div class="container">
             <ul class="st-nav-menu nav navbar-nav">
-                <li class="st-nav-section nav-item">
-                    <a href="https://cs.dotnet.gg" class="navbar-brand">
-                        <img src="img/logo.png" alt="C# Discord Logo" class="logo logo-sticky">
-                    </a>
-                </li>
+                <li class="st-nav-section nav-item"><a href="#main" class="navbar-brand"><img src="img/logo.png" alt="CSharp" class="logo logo-sticky"></a></li>
+
                 <li class="st-nav-section st-nav-primary nav-item">
                     <a class="st-root-link nav-link" href="https://cs.dotnet.gg">Home </a>
                     <a class="st-root-link item-products st-has-dropdown nav-link" href="rules">Rules </a>
                     <a class="st-root-link item-products st-has-dropdown nav-link" href="https://discord.gg/csharp">Discord </a>
                     <a class="st-root-link item-company st-has-dropdown nav-link" href="https://github.com/discord-csharp">GitHub </a>
                 </li>
+                
+                <li class="st-nav-section st-nav-mobile nav-item"><button class="st-root-link navbar-toggler" type="button">
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span></button>
+
+                    <div class="st-popup">
+                        <div class="st-popup-container"><a class="st-popup-close-button">Close</a>
+                            <div class="st-dropdown-content-group">
+                                <a href="https://cs.dotnet.gg">Home </a>
+                                <a href="rules">Rules </a>
+                                <a href="https://discord.gg/csharp">Discord </a>
+                                <a href="https://github.com/discord-csharp">GitHub </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
+        </div>
+        <div class="st-dropdown-root">
+            <div class="st-dropdown-bg">
+                <div class="st-alt-bg"></div>
+            </div>
+            <div class="st-dropdown-arrow"></div>
+            <div class="st-dropdown-container">
+            </div>
         </div>
     </nav>
     
@@ -45,7 +68,7 @@
                 <div class="row">
                     <div class="col-md-10 mx-auto text-center">
                         <h1 class="bold font-md font-md-lg">A community for help, support and discussion for all things C#</h1>
-                        <p class="lead text-muted">With over 12,000 members, and over 200,000 messages a month, join the most active .NET C# Discord community to help or get help and discuss programming with like-minded people.</p>
+                        <p class="lead text-muted">With over 15,000 members, and over 200,000 messages a month, join the most active .NET C# Discord community to help or get help and discuss programming with like-minded people.</p>
                         <a href="https://discord.gg/csharp" class="btn btn-primary btn-lg btn-rounded bold px-4 mt-4">Join the Discord</a>
                     </div>
                 </div>
@@ -60,5 +83,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/stripe-bubbles.js"></script>
+    <script src="js/stripe-menu.js"></script>
 </body>
 </html>
