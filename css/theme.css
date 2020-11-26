@@ -17991,8 +17991,6 @@ main {
       .navigation:not(.fixed-top) {
         position: static;
         top: -90px; }
-      .navigation.fixed-top {
-        background-color: transparent; }
         .navigation.fixed-top .navbar-collapse {
           height: auto; }
         .navigation.fixed-top .nav-link {
